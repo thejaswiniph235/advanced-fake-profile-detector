@@ -1,0 +1,8 @@
+{
+  "info":{"name":"Advanced Fake Profile Detector","schema":"https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},
+  "item":[
+    {"name":"Register","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"email\":\"demo@example.com\",\"password\":\"password123\"}"},"url":{"raw":"http://localhost:8080/api/auth/register","host":["localhost"],"port":"8080","path":["api","auth","register"]}}},
+    {"name":"Login","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"email\":\"demo@example.com\",\"password\":\"password123\"}"},"url":{"raw":"http://localhost:8080/api/auth/login","host":["localhost"],"port":"8080","path":["api","auth","login"]}}},
+    {"name":"Analyze","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"},{"key":"Authorization","value":"Bearer {{token}}"}],"body":{"mode":"raw","raw":"{\"username\":\"bot123\",\"followers\":20,\"following\":2000,\"posts\":5000,\"accountAgeDays\":10,\"postsPerDay\":100,\"hasProfilePicture\":false,\"hasBio\":false,\"repeatedComments\":true,\"twentyFourHourActivity\":true}"},"url":{"raw":"http://localhost:8080/api/detections","host":["localhost"],"port":"8080","path":["api","detections"]}}}
+  ]
+}
